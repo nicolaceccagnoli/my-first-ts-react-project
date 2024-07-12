@@ -1,7 +1,12 @@
 // Insieme a React importo anche useRef
 import React, { useRef } from 'react';
 
-const NewTodo: React.FC = () => {
+// Definisco un type personalizzato per la props che sto passando
+type NewTodoProps = {
+    onAddTodo: (todoText: string) => void;
+}
+
+const NewTodo: React.FC<NewTodoProps> = props => {
     /*
         Definisco un riferimento per l'input del form e gli diamo 
         come valore predefinito null, dato che quando il componente viene
@@ -15,7 +20,7 @@ const NewTodo: React.FC = () => {
 
         const enteredText = textInputRef.current!.value;
 
-        console.log(enteredText);
+        props.onAddTodo(enteredText);
     }
 
     return (
