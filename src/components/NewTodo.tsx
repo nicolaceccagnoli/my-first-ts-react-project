@@ -1,5 +1,6 @@
 // Insieme a React importo anche useRef
 import React, { useRef } from 'react';
+import './NewTodo.css';
 
 // Definisco un type personalizzato per la props che sto passando
 type NewTodoProps = {
@@ -26,7 +27,7 @@ const NewTodo: React.FC<NewTodoProps> = props => {
     return (
         // Definisco un form per aggiungere un nuovo Todo alla lista
         <form onSubmit={todoSubmitHandler}>
-            <div>
+            <div className='form-control'>
                 <label htmlFor="todo-text">Inserisci un nuovo Todo:</label>
                 <input type="text" id="todo-text" ref={textInputRef}/>
             </div>

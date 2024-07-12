@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoList.css';
 
 // Definisco un interfaccia per il type di props che stiamo passando
 interface TodoListProps {
